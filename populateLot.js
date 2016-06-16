@@ -6,10 +6,11 @@ Carlot = (function(originalFunction){
         if(event.currentTarget.classList[1] === "clickedCar"){
           originalFunction.removeClass();
           console.log("target",event.currentTarget );
-        }
-				else {
+        } else {
           originalFunction.clickedCar("red");
-        }
+          }
+        userInput.focus();
+
       })
     }
     userInput.addEventListener("keyup", function(e){
