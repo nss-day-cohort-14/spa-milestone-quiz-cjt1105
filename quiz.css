@@ -8,7 +8,8 @@ button {
 }
 .car-container {
 	border: 2px solid black;
-	height: 400px;
+	min-height: 400px;
+	height: 100%;
 }
 .car-element {
 	margin-top: 2%;
@@ -24,4 +25,7 @@ button {
 }
 #clear {
 	width: 150px;
+}
+.description {
+	width: 100%;
 }

@@ -1,4 +1,5 @@
 var description =  null;
+var clearButton = document.querySelector('#clear')
 Carlot = (function(originalFunction){
   originalFunction.activeEvents = function(){
     carContainer = document.querySelectorAll('.car-container');
@@ -18,7 +19,11 @@ Carlot = (function(originalFunction){
     userInput.addEventListener("keyup", function(e){
 			input = userInput.value;
       console.log("input",input);
-      description.innerHTML += input;
+      description.innerHTML = input;
+    })
+    clearButton.addEventListener('click', function(){
+      userInput.value = " "
+      description.innerHTML = ""
     })
   }
 
