@@ -22,3 +22,6 @@ button {
 .clickedCar {
 	border-width: 4px;
 }
+#clear {
+	width: 150px;
+}

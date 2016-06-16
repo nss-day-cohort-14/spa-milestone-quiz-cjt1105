@@ -1,3 +1,4 @@
+var description =  null;
 Carlot = (function(originalFunction){
   originalFunction.activeEvents = function(){
     carContainer = document.querySelectorAll('.car-container');
@@ -5,19 +6,19 @@ Carlot = (function(originalFunction){
       carContainer[i].addEventListener('click', function(){
         if(event.currentTarget.classList[1] === "clickedCar"){
           originalFunction.removeClass();
-          console.log("target",event.currentTarget );
         } else {
           originalFunction.clickedCar("red");
           }
         userInput.focus();
-
+        userInput.value = ""
+        description = event.currentTarget.querySelector('.description');
+        return description
       })
     }
     userInput.addEventListener("keyup", function(e){
-			if(e.keyCode === 13){
-				input = userInput.value;
-				alert('hi');
-			}
+			input = userInput.value;
+      console.log("input",input);
+      description.innerHTML += input;
     })
   }
 

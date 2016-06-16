@@ -43,7 +43,7 @@ function populateLot(){
                           <span class="car-header">Color</span>
                           <span class="car-element">${currentInventory.color}</span>
                           <span class="car-header">Description</span>
-                          <span class="car-element">${currentInventory.description}</span>
+                          <span class="description">${currentInventory.description}</span>
                         </div>
                       </div>`
   }
