@@ -12,9 +12,7 @@ var CarLot = (function () {
       inventoryLoader.open('GET', "inventory.json");
       inventoryLoader.send();
       inventoryLoader.addEventListener("load", function () {
-        inventory = JSON.parse(this.responseText).cars;
-        console.log("cars", inventory);
-
+      inventory = JSON.parse(this.responseText).cars;
       callbackFunction(inventory)
       });
     }
@@ -42,8 +40,10 @@ function populateLot(){
                           <span class="car-element">${currentInventory.price}</span>
                           <span class="car-header">Color</span>
                           <span class="car-element">${currentInventory.color}</span>
-                          <span class="car-header">Description</span>
-                          <span class="description">${currentInventory.description}</span>
+                          <div class="description-wrapper"
+                            <span class="car-header">Description</span>
+                            <p class="description">${currentInventory.description}</p>
+                          </div>
                         </div>
                       </div>`
   }
@@ -54,6 +54,3 @@ function populateLot(){
   }
   CarLot.activeEvents();
 }
-
-
-
