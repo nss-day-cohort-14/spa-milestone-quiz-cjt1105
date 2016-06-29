@@ -13,7 +13,7 @@ var CarLot = (function () {
       inventoryLoader.send();
       inventoryLoader.addEventListener("load", function () {
       inventory = JSON.parse(this.responseText).cars;
-      callbackFunction(inventory)
+      callbackFunction();
       });
     }
   };

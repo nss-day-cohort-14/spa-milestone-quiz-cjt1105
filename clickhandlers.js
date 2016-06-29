@@ -1,11 +1,11 @@
 var CarLot = (function(orginal) {
-  orginal.clickedCar = function(color) {
-    event.currentTarget.classList.add('clickedCar');
-    event.currentTarget.style.backgroundColor = color
-  };
   orginal.removeClass = function() {
     event.currentTarget.classList.remove('clickedCar');
     event.currentTarget.style.backgroundColor = "white"
   }
-  return orginal
+  orginal.clickedCar = function(target,color) {
+    target.classList.add('clickedCar');
+    target.style.backgroundColor = color
+  };
+return orginal
 })(CarLot)

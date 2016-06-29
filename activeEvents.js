@@ -7,10 +7,15 @@ Carlot = (function(originalFunction) {
       carContainer[i].addEventListener('click', function() {
         if (event.currentTarget.classList[1] === "clickedCar") {
           originalFunction.removeClass();
+          userInput.blur();
         } else {
-          originalFunction.clickedCar("red");
+          for (let i = 0; i < carContainer.length; i++){
+            carContainer[i].classList.remove('clickedCar');
+            carContainer[i].style.backgroundColor = "white"
+          }
+          originalFunction.clickedCar(event.currentTarget, "red");
+          userInput.focus();
         }
-        userInput.focus();
         userInput.value = ""
         description = event.currentTarget.querySelector('.description');
         return description
@@ -27,8 +32,3 @@ Carlot = (function(originalFunction) {
   }
 
 })(CarLot)
-
-
-
-
-
